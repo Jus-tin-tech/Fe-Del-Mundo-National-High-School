@@ -9,7 +9,7 @@
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f0fff0;
-            color: #004d00;
+            color: #003300;
             margin: 0;
             padding: 0;
             overflow-x: hidden;
@@ -18,7 +18,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: #008000;
+            background-color: rgba(0, 128, 0, 0.9);
             color: white;
             padding: 15px 30px;
             position: fixed;
@@ -29,7 +29,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
         .logo {
-            width: 80px;
+            width: 100px;
             margin-right: 15px;
         }
         .logo-container {
@@ -37,7 +37,7 @@
             align-items: center;
         }
         .school-name {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
         }
         nav ul {
@@ -74,6 +74,7 @@
             opacity: 0;
             transform: translateY(20px);
             animation: fadeInUp 1s ease forwards;
+            color: #003300;
         }
         section:hover {
             transform: scale(1.03);
@@ -81,9 +82,24 @@
         }
         .history-section {
             background: url('school_photo.jpg') no-repeat center center/cover;
-            color: white;
+            color: #f0fff0;
             padding: 60px;
             border-radius: 15px;
+            background-attachment: fixed;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #008000;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+        .button:hover {
+            background-color: #004d00;
+            transform: scale(1.05);
         }
         @keyframes fadeInUp {
             from {
@@ -100,9 +116,8 @@
             color: white;
             text-align: center;
             padding: 10px;
-            position: fixed;
+            position: relative;
             width: 100%;
-            bottom: 0;
         }
     </style>
 </head>
@@ -132,42 +147,30 @@
         <section id="ebook">
             <h2>E-Book Learning - Pre-Calculus</h2>
             <p>Explore our interactive e-books and resources to excel in Pre-Calculus.</p>
-            <a href="ebook.html">Access E-Book Learning</a>
+            <a href="ebook.html" class="button">Access E-Book Learning</a>
         </section>
 
         <section id="announcements">
             <h2>School Announcements</h2>
             <p>Stay updated with the latest news and events.</p>
-            <a href="announcements.html">View Announcements</a>
+            <a href="announcements.html" class="button">View Announcements</a>
         </section>
 
         <section id="achievements">
             <h2>School Achievements</h2>
             <p>Celebrating the milestones and accomplishments of our students and faculty.</p>
-            <a href="achievements.html">View Achievements</a>
+            <a href="achievements.html" class="button">View Achievements</a>
         </section>
 
         <section id="history" class="history-section">
             <h2>History of Fe Del Mundo NHS</h2>
-            <p>Fe Del Mundo National High School was established with the goal of academic excellence and holistic student development. Over the years, it has produced outstanding graduates and contributed significantly to education. The school continues to innovate and uphold its values of integrity, discipline, and excellence.</p>
-            <a href="history.html">Read More</a>
+            <p>Fe Del Mundo National High School was established with the goal of academic excellence...</p>
+            <a href="history.html" class="button">Read More</a>
         </section>
     </main>
     
     <footer>
         <p>&copy; 2025 Fe Del Mundo National High School. All Rights Reserved.</p>
     </footer>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll("section");
-            sections.forEach((section, index) => {
-                setTimeout(() => {
-                    section.style.opacity = "1";
-                    section.style.transform = "translateY(0)";
-                }, index * 200);
-            });
-        });
-    </script>
 </body>
 </html>
