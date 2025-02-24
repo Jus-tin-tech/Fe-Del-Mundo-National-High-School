@@ -48,10 +48,16 @@
             text-align: center;
         }
         section {
-            margin: 20px 0;
-            transition: transform 0.3s ease;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            border: 2px solid #008000;
+            border-radius: 10px;
+            background-color: white;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         section:hover {
+            background-color: #e6ffe6;
             transform: scale(1.02);
         }
         footer {
@@ -102,26 +108,12 @@
 
         <section id="history">
             <h2><a href="history.html">History of Fe Del Mundo NHS</a></h2>
-            <p>Fe Del Mundo National High School has a rich history of academic excellence...</p>
+            <p>Fe Del Mundo National High School, established in Barangay Fe Del Mundo, Mansalay, Oriental Mindoro, was named in honor of Dr. Fe Del Mundo, a renowned Filipino pediatrician. Dr. Del Mundo was born on November 27, 1911, in Intramuros, Manila. She was a trailblazer in pediatric medicine, dedicating her life to the health and well-being of children. Her commitment to medical excellence and education serves as the foundation of our school's values and mission.</p>
         </section>
     </main>
     
     <footer>
         <p>&copy; 2025 Fe Del Mundo National High School. All Rights Reserved.</p>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const links = document.querySelectorAll("nav ul li a, section h2 a");
-            links.forEach(link => {
-                link.addEventListener("mouseover", function() {
-                    this.style.color = "yellow";
-                });
-                link.addEventListener("mouseout", function() {
-                    this.style.color = "white";
-                });
-            });
-        });
-    </script>
 </body>
 </html>
