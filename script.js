@@ -81,29 +81,30 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         .history-section {
-            position: relative;
-            background: url('school_photo.jpg') no-repeat center center/cover;
-            color: white;
-            padding: 60px;
-            border-radius: 15px;
-            background-attachment: fixed;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            animation: fadeIn 1s ease-in-out forwards;
-        }
-        .history-section::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 15px;
-        }
-        .history-section h2, .history-section p, .history-section a {
-            position: relative;
-            z-index: 1;
-        }
+    position: relative;
+    background: url('school_photo.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 60px;
+    border-radius: 15px;
+    background-attachment: fixed;
+}
+
+.history-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0;
+}
+
+.history-section h2, .history-section p {
+    position: relative;
+    z-index: 1;
+}
+
         .button {
             display: inline-block;
             padding: 10px 20px;
